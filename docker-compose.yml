@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+    notebook:
+        build: .
+        image: d18n/ru-tts
+        ports:
+            - "8888:8888"
+        volumes:
+            - downloads:/workspace/espnet/egs/ru/tts1/downloads
+volumes:
+    downloads:
+        driver: local
